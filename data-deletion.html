@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Deletion Instructions — CreConnect</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f7f8fa; color: #1a1a2e; line-height: 1.75; }
+    header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: #fff; padding: 48px 24px 40px; }
+    header .back { display: inline-block; font-size: .85rem; color: #a0aec0; text-decoration: none; margin-bottom: 16px; }
+    header .back:hover { color: #fff; }
+    header .logo { font-size: 1.6rem; font-weight: 800; }
+    header .logo span { color: #e94560; }
+    header h1 { font-size: 2rem; font-weight: 700; margin-top: 12px; }
+    header .meta { margin-top: 8px; font-size: .875rem; color: #a0aec0; }
+    header .badge { display: inline-block; margin-top: 14px; background: #e94560; color: #fff; font-size: .8rem; font-weight: 700; padding: 4px 12px; border-radius: 99px; letter-spacing: .5px; }
+    .container { max-width: 860px; margin: 0 auto; padding: 56px 24px 100px; }
+    .intro-card { background: #eef2ff; border: 1px solid #c7d2fe; border-radius: 12px; padding: 24px 28px; margin-bottom: 40px; }
+    .intro-card p { font-size: .95rem; color: #374151; margin: 0; }
+    .method-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; margin-bottom: 40px; }
+    .method-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 28px 24px; }
+    .method-card .number { width: 36px; height: 36px; background: #4f46e5; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: .95rem; margin-bottom: 14px; }
+    .method-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
+    .method-card p { font-size: .875rem; color: #718096; line-height: 1.6; }
+    section { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 36px 40px; margin-bottom: 24px; }
+    section h2 { font-size: 1.25rem; font-weight: 700; color: #1a1a2e; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #eef2ff; }
+    section h3 { font-size: 1rem; font-weight: 700; margin: 20px 0 8px; color: #1a1a2e; }
+    section p { margin-bottom: 14px; font-size: .95rem; color: #374151; }
+    section ul, section ol { padding-left: 22px; margin-bottom: 14px; }
+    section li { font-size: .95rem; color: #374151; margin-bottom: 8px; }
+    .steps { counter-reset: step; padding: 0; list-style: none; }
+    .steps li { counter-increment: step; display: flex; gap: 16px; margin-bottom: 20px; }
+    .steps li::before { content: counter(step); min-width: 32px; height: 32px; background: #4f46e5; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: .9rem; flex-shrink: 0; margin-top: 2px; }
+    .steps li div strong { display: block; font-size: .95rem; color: #1a1a2e; margin-bottom: 4px; }
+    .steps li div p { margin: 0; font-size: .875rem; color: #718096; }
+    .highlight { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 16px 0; font-size: .9rem; }
+    .success { background: #d1fae5; border-left: 4px solid #10b981; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 16px 0; font-size: .9rem; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: .9rem; }
+    th { background: #eef2ff; color: #4f46e5; padding: 10px 14px; text-align: left; font-weight: 700; border: 1px solid #e2e8f0; }
+    td { padding: 10px 14px; border: 1px solid #e2e8f0; color: #374151; vertical-align: top; }
+    tr:nth-child(even) td { background: #f7f8fa; }
+    .contact-box { background: #eef2ff; border-radius: 10px; padding: 20px 24px; margin-top: 16px; }
+    .contact-box p { margin: 0; font-size: .9rem; }
+    .cta-btn { display: inline-block; margin-top: 16px; background: #e94560; color: #fff; font-weight: 700; font-size: .95rem; padding: 12px 28px; border-radius: 8px; text-decoration: none; }
+    .cta-btn:hover { background: #c73652; }
+    footer { text-align: center; padding: 32px 24px; font-size: .85rem; color: #a0aec0; border-top: 1px solid #e2e8f0; }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="back" href="index.html">← Back to Legal Documents</a>
+    <div class="logo">Cre<span>Connect</span></div>
+    <h1>Data Deletion Instructions</h1>
+    <div class="meta">Required by Meta Platform Policy &nbsp;|&nbsp; Last Updated: January 1, 2024</div>
+    <div class="badge">Meta App Review Required</div>
+  </header>
+
+  <div class="container">
+
+    <div class="intro-card">
+      <p>This page explains how to delete the data that CreConnect has collected from your Facebook and/or Instagram account, as well as all personal data associated with your CreConnect account. You have three ways to request data deletion. All deletion requests are processed within <strong>30 days</strong>.</p>
+    </div>
+
+    <div class="method-grid">
+      <div class="method-card">
+        <div class="number">1</div>
+        <h3>Delete via App Settings</h3>
+        <p>The quickest method. Log in to CreConnect and delete your account from your profile settings.</p>
+      </div>
+      <div class="method-card">
+        <div class="number">2</div>
+        <h3>Delete via Facebook Settings</h3>
+        <p>Remove CreConnect's access to your Facebook/Instagram data directly from your Facebook account settings.</p>
+      </div>
+      <div class="method-card">
+        <div class="number">3</div>
+        <h3>Submit a Deletion Request</h3>
+        <p>Send us a formal data deletion request via our online form or by email for complete data removal.</p>
+      </div>
+    </div>
+
+    <!-- METHOD 1 -->
+    <section>
+      <h2>Method 1: Delete Your Account via CreConnect Settings</h2>
+      <p>This method deletes your CreConnect account and all associated data, including any data obtained from Facebook/Instagram.</p>
+      <ol class="steps">
+        <li>
+          <div>
+            <strong>Log in to CreConnect</strong>
+            <p>Visit <em>creconnect.com</em> and sign in to your account using your credentials.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Go to Account Settings</strong>
+            <p>Click on your profile picture or avatar in the top right corner, then select <strong>"Settings"</strong> from the dropdown menu.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Navigate to Privacy &amp; Data</strong>
+            <p>In the Settings menu, select <strong>"Privacy &amp; Data"</strong> or <strong>"Account Management."</strong></p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Select "Delete Account"</strong>
+            <p>Scroll to the bottom of the page and click <strong>"Delete My Account."</strong> You will be asked to confirm this action.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Confirm Deletion</strong>
+            <p>Enter your password to confirm, then click <strong>"Permanently Delete."</strong> You will receive a confirmation email at your registered address.</p>
+          </div>
+        </li>
+      </ol>
+      <div class="success">
+        <strong>What happens next:</strong> Your account will be deactivated immediately. All personal data, including any Facebook/Instagram data we stored, will be permanently deleted within <strong>30 days</strong>. Some aggregated, anonymized analytics data may be retained longer for platform improvement purposes.
+      </div>
+    </section>
+
+    <!-- METHOD 2 -->
+    <section>
+      <h2>Method 2: Remove Access via Facebook / Instagram Settings</h2>
+      <p>This method removes CreConnect's permission to access your Facebook or Instagram data going forward. It does not automatically delete data already collected. For full data deletion, also follow Method 1 or Method 3.</p>
+
+      <h3>To Remove from Facebook:</h3>
+      <ol class="steps">
+        <li>
+          <div>
+            <strong>Go to Facebook Settings</strong>
+            <p>Visit <a href="https://www.facebook.com/settings" target="_blank" rel="noopener">facebook.com/settings</a> and log in to your account.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Open "Apps and Websites"</strong>
+            <p>In the left sidebar, click on <strong>"Apps and Websites"</strong> (under "Security and Login" or directly in the sidebar).</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Find CreConnect</strong>
+            <p>Search for or scroll to find <strong>"CreConnect"</strong> in the list of connected apps.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Remove the App</strong>
+            <p>Click the checkbox next to CreConnect, then click <strong>"Remove."</strong> Check the option to also delete activity if available.</p>
+          </div>
+        </li>
+      </ol>
+
+      <h3>To Remove from Instagram:</h3>
+      <ol class="steps">
+        <li>
+          <div>
+            <strong>Open Instagram Settings</strong>
+            <p>Go to your Instagram profile, tap the hamburger menu (≡), then select <strong>"Settings."</strong></p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Go to "Apps and Websites"</strong>
+            <p>Tap <strong>"Security"</strong> then <strong>"Apps and Websites."</strong></p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Find and Remove CreConnect</strong>
+            <p>Tap <strong>CreConnect</strong> in the Active apps list, then tap <strong>"Remove."</strong></p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="highlight">
+        <strong>Note:</strong> Removing access via Facebook/Instagram stops future data collection but does not delete data already stored in CreConnect. To request full deletion of stored data, please also submit a formal request using Method 3 below.
+      </div>
+    </section>
+
+    <!-- METHOD 3 -->
+    <section>
+      <h2>Method 3: Submit a Formal Data Deletion Request</h2>
+      <p>If you cannot access your account, or if you want to request deletion of specific data while keeping your account, you can submit a formal data deletion request.</p>
+      <a class="cta-btn" href="data-deletion-request.html">Submit Data Deletion Request →</a>
+      <p style="margin-top: 20px;">Alternatively, you can send an email to:</p>
+      <div class="contact-box">
+        <p><strong>Privacy Team — CreConnect</strong><br />
+        Email: <a href="mailto:privacy@creconnect.com">privacy@creconnect.com</a><br />
+        Subject Line: <em>"Data Deletion Request — [Your Registered Email]"</em><br />
+        Include: Your full name, registered email address, and the type of data you want deleted.</p>
+      </div>
+      <p style="margin-top: 14px;">We will acknowledge your request within <strong>5 business days</strong> and complete the deletion within <strong>30 days</strong>.</p>
+    </section>
+
+    <!-- WHAT IS DELETED -->
+    <section>
+      <h2>What Data Will Be Deleted</h2>
+      <p>Upon a successful deletion request, the following data will be permanently removed:</p>
+      <table>
+        <thead>
+          <tr><th>Data Category</th><th>Deletion Timeline</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Account credentials (email, password hash)</td><td>Within 30 days</td><td>Immediate deactivation; full deletion within 30 days</td></tr>
+          <tr><td>Profile data (name, bio, photo, links)</td><td>Within 30 days</td><td>Removed from all public-facing pages immediately</td></tr>
+          <tr><td>Facebook/Instagram data (profile, metrics, media)</td><td>Within 30 days</td><td>Includes all data retrieved via Graph API</td></tr>
+          <tr><td>Campaign data and collaboration records</td><td>Within 30 days</td><td>Financial records may be retained for up to 7 years per legal requirements</td></tr>
+          <tr><td>Messages and communications</td><td>Within 30 days</td><td>Counterparty copies may remain in their accounts</td></tr>
+          <tr><td>Uploaded media (Cloudinary)</td><td>Within 30 days</td><td>Deletion request sent to Cloudinary simultaneously</td></tr>
+          <tr><td>Analytics and usage logs</td><td>Anonymized within 30 days; logs purged within 90 days</td><td>Aggregated data without personal identifiers may be retained</td></tr>
+          <tr><td>Backup copies</td><td>Purged from backups within 90 days</td><td>Backups rotate on a 90-day cycle</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Data We May Retain</h3>
+      <p>In limited circumstances, we may retain certain data after a deletion request for the following reasons:</p>
+      <ul>
+        <li><strong>Legal Obligations:</strong> Financial transaction records may be retained for up to 7 years as required by tax and financial regulations.</li>
+        <li><strong>Fraud Prevention:</strong> Information necessary to prevent re-registration by banned users may be retained in a minimal, hashed form.</li>
+        <li><strong>Dispute Resolution:</strong> Data related to pending legal claims or active disputes may be retained until resolution.</li>
+      </ul>
+    </section>
+
+    <!-- CONFIRMATION -->
+    <section>
+      <h2>Confirmation and Timeline</h2>
+      <p>After submitting a deletion request:</p>
+      <ul>
+        <li>You will receive an <strong>acknowledgment email</strong> within 5 business days confirming receipt of your request.</li>
+        <li>Deletion will be completed within <strong>30 days</strong> of verification.</li>
+        <li>You will receive a <strong>completion notification</strong> once all data has been deleted.</li>
+        <li>Backup data will be purged within <strong>90 days</strong> as backup cycles rotate.</li>
+      </ul>
+      <p>If you do not receive a confirmation email, please check your spam folder or contact <a href="mailto:privacy@creconnect.com">privacy@creconnect.com</a>.</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section>
+      <h2>Questions?</h2>
+      <p>If you have questions about the data deletion process or need assistance, please contact us:</p>
+      <div class="contact-box">
+        <p><strong>CreConnect Privacy Team</strong><br />
+        Email: <a href="mailto:privacy@creconnect.com">privacy@creconnect.com</a><br />
+        Data Protection Officer: <a href="mailto:dpo@creconnect.com">dpo@creconnect.com</a><br />
+        Address: [Company Legal Address]</p>
+      </div>
+    </section>
+
+  </div>
+  <footer>
+    &copy; 2024 CreConnect. All rights reserved. &nbsp;|&nbsp;
+    <a href="index.html" style="color:#4f46e5;text-decoration:none;">Legal Documents Index</a>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Deletion Request — CreConnect</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f7f8fa; color: #1a1a2e; line-height: 1.75; }
+    header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: #fff; padding: 48px 24px 40px; }
+    header .back { display: inline-block; font-size: .85rem; color: #a0aec0; text-decoration: none; margin-bottom: 16px; }
+    header .back:hover { color: #fff; }
+    header .logo { font-size: 1.6rem; font-weight: 800; }
+    header .logo span { color: #e94560; }
+    header h1 { font-size: 2rem; font-weight: 700; margin-top: 12px; }
+    header .meta { margin-top: 8px; font-size: .875rem; color: #a0aec0; }
+    .container { max-width: 760px; margin: 0 auto; padding: 56px 24px 100px; }
+    .info-card { background: #eef2ff; border: 1px solid #c7d2fe; border-radius: 12px; padding: 24px 28px; margin-bottom: 40px; }
+    .info-card p { font-size: .95rem; color: #374151; margin: 0; }
+    .form-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 40px; margin-bottom: 32px; }
+    .form-card h2 { font-size: 1.25rem; font-weight: 700; color: #1a1a2e; margin-bottom: 24px; }
+    .form-group { margin-bottom: 22px; }
+    label { display: block; font-size: .9rem; font-weight: 600; color: #374151; margin-bottom: 6px; }
+    label .required { color: #e94560; margin-left: 3px; }
+    input[type="text"], input[type="email"], textarea, select { width: 100%; padding: 11px 14px; border: 1.5px solid #e2e8f0; border-radius: 8px; font-size: .95rem; color: #1a1a2e; background: #f7f8fa; transition: border-color .2s; font-family: inherit; }
+    input[type="text"]:focus, input[type="email"]:focus, textarea:focus, select:focus { outline: none; border-color: #4f46e5; background: #fff; }
+    textarea { resize: vertical; min-height: 100px; }
+    .checkbox-group { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+    .checkbox-label { display: flex; align-items: flex-start; gap: 10px; font-size: .9rem; font-weight: 400; color: #374151; cursor: pointer; }
+    .checkbox-label input[type="checkbox"] { margin-top: 3px; accent-color: #4f46e5; width: 16px; height: 16px; flex-shrink: 0; cursor: pointer; }
+    .form-hint { font-size: .8rem; color: #718096; margin-top: 5px; }
+    .submit-btn { width: 100%; padding: 14px; background: #e94560; color: #fff; border: none; border-radius: 8px; font-size: 1rem; font-weight: 700; cursor: pointer; margin-top: 8px; transition: background .2s; }
+    .submit-btn:hover { background: #c73652; }
+    .divider { text-align: center; color: #a0aec0; font-size: .875rem; margin: 28px 0; position: relative; }
+    .divider::before { content: ""; position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: #e2e8f0; }
+    .divider span { background: #f7f8fa; padding: 0 16px; position: relative; }
+    .email-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 32px 40px; margin-bottom: 32px; }
+    .email-card h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 16px; }
+    .email-card p { font-size: .95rem; color: #374151; margin-bottom: 14px; }
+    .code-block { background: #1a1a2e; color: #a0f0a0; border-radius: 8px; padding: 16px 20px; font-family: 'Courier New', monospace; font-size: .875rem; line-height: 1.7; margin: 16px 0; }
+    section { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 32px 40px; margin-bottom: 24px; }
+    section h2 { font-size: 1.15rem; font-weight: 700; margin-bottom: 14px; }
+    section p { font-size: .95rem; color: #374151; margin-bottom: 12px; }
+    section ul { padding-left: 20px; }
+    section li { font-size: .9rem; color: #374151; margin-bottom: 6px; }
+    .timeline { display: flex; flex-direction: column; gap: 16px; margin-top: 16px; }
+    .timeline-item { display: flex; gap: 16px; align-items: flex-start; }
+    .timeline-dot { width: 12px; height: 12px; background: #4f46e5; border-radius: 50%; flex-shrink: 0; margin-top: 6px; }
+    .timeline-item div strong { font-size: .9rem; color: #1a1a2e; }
+    .timeline-item div p { margin: 2px 0 0; font-size: .85rem; color: #718096; }
+    .contact-box { background: #eef2ff; border-radius: 10px; padding: 20px 24px; margin-top: 16px; }
+    .contact-box p { margin: 0; font-size: .9rem; }
+    footer { text-align: center; padding: 32px 24px; font-size: .85rem; color: #a0aec0; border-top: 1px solid #e2e8f0; }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="back" href="data-deletion.html">← Back to Deletion Instructions</a>
+    <div class="logo">Cre<span>Connect</span></div>
+    <h1>Data Deletion Request</h1>
+    <div class="meta">Submit a request to permanently delete your personal data from CreConnect</div>
+  </header>
+
+  <div class="container">
+
+    <div class="info-card">
+      <p>Use this form to request the deletion of your personal data from CreConnect, including any data we obtained from your connected Facebook or Instagram account. All requests are processed within <strong>30 days</strong>. You will receive an email confirmation once your data has been deleted.</p>
+    </div>
+
+    <!-- FORM -->
+    <div class="form-card">
+      <h2>Submit Your Deletion Request</h2>
+
+      <form action="mailto:privacy@creconnect.com" method="post" enctype="text/plain"
+            onsubmit="return handleFormSubmit(event)">
+
+        <div class="form-group">
+          <label for="fullname">Full Name <span class="required">*</span></label>
+          <input type="text" id="fullname" name="fullname" placeholder="Your full name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Registered Email Address <span class="required">*</span></label>
+          <input type="email" id="email" name="email" placeholder="email@example.com" required />
+          <div class="form-hint">Use the email address associated with your CreConnect account.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="account-type">Account Type <span class="required">*</span></label>
+          <select id="account-type" name="account-type" required>
+            <option value="" disabled selected>Select your account type</option>
+            <option value="creator">Creator</option>
+            <option value="brand">Brand</option>
+            <option value="no-account">I don't have a CreConnect account (Facebook/Instagram data only)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>What data would you like deleted? <span class="required">*</span></label>
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="delete-all" value="yes" onchange="toggleAll(this)" />
+              <span><strong>All data</strong> — Delete my entire account and all associated data</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="delete-facebook" value="yes" class="specific-check" />
+              <span>Facebook / Instagram data only (data obtained via connected social accounts)</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="delete-profile" value="yes" class="specific-check" />
+              <span>Profile information (name, bio, photo, social links)</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="delete-messages" value="yes" class="specific-check" />
+              <span>Messages and communication history</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="delete-campaigns" value="yes" class="specific-check" />
+              <span>Campaign and collaboration data</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="delete-analytics" value="yes" class="specific-check" />
+              <span>Analytics and usage data</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="reason">Reason for Deletion (Optional)</label>
+          <select id="reason" name="reason">
+            <option value="" disabled selected>Select a reason (optional)</option>
+            <option value="no-longer-using">I no longer use this service</option>
+            <option value="privacy-concerns">Privacy concerns</option>
+            <option value="switching-service">Switching to another service</option>
+            <option value="facebook-login">I only connected Facebook/Instagram and want that data removed</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="additional">Additional Details (Optional)</label>
+          <textarea id="additional" name="additional"
+            placeholder="Any additional information about your request..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="checkbox-label" style="font-size:.9rem; font-weight:400;">
+            <input type="checkbox" name="confirm" required style="margin-top:3px;"/>
+            <span>I confirm that I am the account holder or authorized representative, and I understand that data deletion is permanent and cannot be undone. <span class="required">*</span></span>
+          </label>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Deletion Request</button>
+      </form>
+    </div>
+
+    <div class="divider"><span>OR</span></div>
+
+    <!-- EMAIL OPTION -->
+    <div class="email-card">
+      <h2>Request via Email</h2>
+      <p>You can also send your deletion request directly to our privacy team. Use the template below:</p>
+      <div class="code-block">
+To: privacy@creconnect.com<br />
+Subject: Data Deletion Request — [Your Registered Email]<br />
+<br />
+Dear CreConnect Privacy Team,<br />
+<br />
+I am requesting the permanent deletion of my personal data<br />
+from the CreConnect platform.<br />
+<br />
+Account Details:<br />
+- Full Name: [Your Full Name]<br />
+- Registered Email: [Your Email Address]<br />
+- Account Type: [Creator / Brand]<br />
+<br />
+Data to Delete:<br />
+[ ] All account data<br />
+[ ] Facebook/Instagram data only<br />
+[ ] Specific data: [describe]<br />
+<br />
+I confirm that I am the account holder and understand<br />
+this deletion is permanent and irreversible.<br />
+<br />
+Thank you.
+      </div>
+      <p>We will acknowledge your request within <strong>5 business days</strong>.</p>
+    </div>
+
+    <!-- TIMELINE -->
+    <section>
+      <h2>What Happens After You Submit</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div>
+            <strong>Within 24 hours:</strong>
+            <p>Your request is received and logged by our privacy team.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div>
+            <strong>Within 5 business days:</strong>
+            <p>We send an acknowledgment email confirming your request and verifying your identity.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div>
+            <strong>Within 30 days:</strong>
+            <p>All requested personal data is permanently deleted from our systems, including data retrieved from Facebook/Instagram APIs.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div>
+            <strong>Completion Notification:</strong>
+            <p>You receive a confirmation email stating that deletion is complete.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div>
+            <strong>Within 90 days:</strong>
+            <p>Your data is purged from all backup systems as backup rotation completes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DATA RETAINED -->
+    <section>
+      <h2>Data We May Retain After Deletion</h2>
+      <p>In limited circumstances required by law, we may retain minimal data after a deletion request:</p>
+      <ul>
+        <li><strong>Financial records:</strong> Transaction data may be retained for up to 7 years per applicable tax and financial regulations.</li>
+        <li><strong>Legal holds:</strong> Data subject to ongoing legal proceedings, regulatory inquiries, or active disputes may be held until resolution.</li>
+        <li><strong>Abuse prevention:</strong> A minimal hashed record may be retained to prevent re-registration by banned accounts.</li>
+      </ul>
+      <p>Such retained data is kept in a restricted, access-controlled environment and will not be used for marketing, profiling, or any other purpose.</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section>
+      <h2>Need Help?</h2>
+      <div class="contact-box">
+        <p><strong>CreConnect Privacy Team</strong><br />
+        Email: <a href="mailto:privacy@creconnect.com">privacy@creconnect.com</a><br />
+        Data Protection Officer: <a href="mailto:dpo@creconnect.com">dpo@creconnect.com</a><br />
+        Response time: Within 5 business days</p>
+      </div>
+    </section>
+
+  </div>
+  <footer>
+    &copy; 2024 CreConnect. All rights reserved. &nbsp;|&nbsp;
+    <a href="index.html" style="color:#4f46e5;text-decoration:none;">Legal Documents Index</a>
+  </footer>
+
+  <script>
+    function toggleAll(checkbox) {
+      const specifics = document.querySelectorAll('.specific-check');
+      specifics.forEach(c => {
+        c.checked = false;
+        c.disabled = checkbox.checked;
+      });
+    }
+
+    function handleFormSubmit(e) {
+      const checks = document.querySelectorAll('input[type="checkbox"][name="delete-all"], .specific-check');
+      const anyChecked = Array.from(checks).some(c => c.checked);
+      if (!anyChecked) {
+        e.preventDefault();
+        alert('Please select at least one type of data to delete.');
+        return false;
+      }
+      const email = document.getElementById('email').value;
+      const name = document.getElementById('fullname').value;
+      const subject = encodeURIComponent('Data Deletion Request — ' + email);
+      const body = encodeURIComponent(
+        'Full Name: ' + name + '\n' +
+        'Registered Email: ' + email + '\n' +
+        'Account Type: ' + document.getElementById('account-type').value + '\n\n' +
+        'This is a formal data deletion request submitted via the CreConnect Data Deletion Request page.'
+      );
+      window.location.href = 'mailto:privacy@creconnect.com?subject=' + subject + '&body=' + body;
+      return false;
+    }
+  </script>
+</body>
+</html>
